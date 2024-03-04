@@ -5,8 +5,8 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
-#permissions:
-# contents: read
+permissions:
+ contents: read
 
 jobs:
   build-and-test:
@@ -20,5 +20,5 @@ jobs:
           # Disabling shallow clone is recommended for improving relevancy of reporting
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
-          token: ${{ github.token }}
+          #token: ${{ github.token }}
       
